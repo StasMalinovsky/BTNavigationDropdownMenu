@@ -77,6 +77,10 @@ class BTTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = BTTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell", configuration: self.configuration)
         cell.textLabel?.text = self.items[(indexPath as NSIndexPath).row]
+        if indexPath.row == self.items.count - 1 {
+            cell.textLabel?.textColor = self.configuration.lastCellTextLabelColor
+            cell.textLabel?.font = self.configuration.lastCellTextLabelFont
+        }
         cell.checkmarkIcon.isHidden = ((indexPath as NSIndexPath).row == selectedIndexPath) ? false : true
         return cell
     }

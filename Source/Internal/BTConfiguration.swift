@@ -29,8 +29,10 @@ final class BTConfiguration {
     var cellBackgroundColor: UIColor?
     var cellSeparatorColor: UIColor?
     var cellTextLabelColor: UIColor?
+    var lastCellTextLabelColor: UIColor?
     var selectedCellTextLabelColor: UIColor?
     var cellTextLabelFont: UIFont!
+    var lastCellTextLabelFont: UIFont!
     var navigationBarTitleFont: UIFont!
     var cellTextLabelAlignment: NSTextAlignment!
     var cellSelectionColor: UIColor?
@@ -63,8 +65,10 @@ final class BTConfiguration {
         self.arrowTintColor = UIColor.white
         self.cellSeparatorColor = UIColor.darkGray
         self.cellTextLabelColor = UIColor.darkGray
+        self.lastCellTextLabelColor = UIColor(red: 255/255, green: 59/255, blue: 74/255, alpha: 1)
         self.selectedCellTextLabelColor = UIColor.darkGray
         self.cellTextLabelFont = UIFont(name: "HelveticaNeue-Bold", size: 17)
+        self.lastCellTextLabelFont = UIFont(name: "HelveticaNeue-Bold", size: 20)
         self.navigationBarTitleFont = UIFont(name: "HelveticaNeue-Bold", size: 17)
         self.cellTextLabelAlignment = NSTextAlignment.left
         self.cellSelectionColor = UIColor.lightGray
